@@ -12,12 +12,12 @@ it("App Router: Works with Client Components (React State)", async () => {
   
   const evincedResult = await EvincedUT.analyzeButton(screen.getByRole("button"));
   // console.log(evincedResult);
-  expect(evincedResult).toHaveNoFailures();
+  expect(evincedResult).toHaveNoWarnings();
 });
 
 it("Links should be accessible", async () => {
   render(<Counter/>);
   const evincedLinkTest = await EvincedUT.analyzeLink(screen.getByRole("link"));
-  // console.log(evincedLinkTest);
+  console.log(evincedLinkTest);
   expect(evincedLinkTest).toHaveNoFailures();
 });

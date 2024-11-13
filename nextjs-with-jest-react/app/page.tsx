@@ -1,4 +1,5 @@
 import Counter from './counter';
+import Modal from './Dialog';
 
 export const metadata = {
   title: "App Router",

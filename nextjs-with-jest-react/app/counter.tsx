@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 
 export default function Counter() {
@@ -8,7 +7,7 @@ export default function Counter() {
     <>
       <div role="count">{count}</div>
       <button type="button" onClick={() => setCount(count + 1)}>
-        +
+      
       </button>
       <a role="link">An Anchor Tag with no HREF</a>
     </>
