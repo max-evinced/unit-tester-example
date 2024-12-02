@@ -1,12 +1,13 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Modal from './Dialog';
+import { Modal, ModalOpener } from './Dialog';
 
 
 // This test suite tests the modal functionality in the Dialog component
 describe('Modal functionality', () => {
    test('opens modal when "Open Modal" button is clicked', async () => {
     // Step 1: Render the Dialog component
+    render(<ModalOpener />);
     render(<Modal />);
 
     // Step 2: Find the button that triggers opening the modal
@@ -20,10 +21,8 @@ describe('Modal functionality', () => {
     expect(modalContent).toBeInTheDocument();
     
     // Step 5 run Evinced
-    const evincedResult = await EvincedUT.analyzeModal(
-      {launcherLocator: {id: "openModal"}},
-      {modalLocator: {id: "closeModal"}}
-    )
+    const evincedResult = await EvincedUT.analyzeModal("#openModal");
+    console.log(evincedResult)
 
     expect(modalContent).toBeInTheDocument();
   });
