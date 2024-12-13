@@ -4,7 +4,8 @@ import EvincedUT, { configure } from '@evinced/unit-tester';
 
 configure({
   serviceAccountId: process.env.SERVICE_ACCOUNT_ID,
-  serviceAccountSecret: process.env.API_KEY,
+  // serviceAccountSecret: process.env.API_KEY,
+  serviceAccountSecret: process.env.UT_JWT,
   suppressAnonymousAuthenticationWarning: true
 })
 
